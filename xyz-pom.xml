@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<artifactId>costbasis-cucumber</artifactId>
+	<parent>
+		<groupId>com.vanguard.retail.ui.test</groupId>
+		<artifactId>hnwoed-regression</artifactId>
+		<version>2020.0200.0-SNAPSHOT</version>
+	</parent>
+	<scm>
+		<connection>scm:svn:http://prdsvnrepo:8080/svn/retail/ui/test/hnwoed/branches/2020.0200.0/costbasis-cucumber</connection>
+		<developerConnection>scm:svn:http://prdsvnrepo:8080/svn/retail/ui/test/hnwoed/branches/2020.0200.0/costbasis-cucumber</developerConnection>
+	</scm>
+	<developers>
+		<developer>
+			<id>uutj</id>
+			<name>Touhidul Islam</name>
+			<email>touhidul_islam@vanguard.com</email>
+			<roles>
+				<role>Automation Developer</role>
+			</roles>
+		</developer>
+
+	</developers>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>hnwoed-region-configuration</artifactId>
+			<version>${project.version}</version>
+			<classifier>tests</classifier>
+		</dependency>
+		<!-- for below import we need selenium-logon. import com.vanguard.service.TestCrewMemberInformationRetrievalService; -->
+		<dependency>
+			<groupId>com.vanguard</groupId>
+			<artifactId>selenium-logon</artifactId>
+		</dependency>
+		<!-- for below imports under common objects we need logon-selenium import 
+			com.vanguard.retail.web.retaillogon.pages.helpers.HNWLogonUtility; import 
+			com.vanguard.retail.web.retaillogon.pages.helpers.OEDLogonUtility; -->
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>logon-selenium</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<!-- for below import we need selenium-test-data-framework. import com.vanguard.selenium.inner.logon.user.TestCrewMemberInformation; -->
+
+
+		<!-- Cucumber -->
+		<dependency>
+			<groupId>com.vanguard.selenium</groupId>
+			<artifactId>cucumber-selenium-inner-source</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard</groupId>
+			<artifactId>cucumber-inner-source</artifactId>
+			<type>jar</type>
+			<scope>test</scope>
+			<classifier>tests</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>accountMaintenance-cucumber</artifactId>
+			<version>${project.version}</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>buySell-cucumber</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>buySellExchange-cucumber</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>tradeTickets-cucumber</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>balanceAndHoldings-cucumber</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.vanguard.retail.ui.test</groupId>
+			<artifactId>orderStatus-cucumber</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+	</dependencies>
+	<name>costbasis-cucumber</name>
+	<properties>
+        <cbac.baseline.url>http://prdsvnrepo:8080/svn/retail/ui/test/hnwoed/branches/2019.1100.0/costbasis-cucumber</cbac.baseline.url>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>
